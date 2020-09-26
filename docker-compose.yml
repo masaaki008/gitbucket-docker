@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  gitbucket:
+    container_name: gitbucket_container
+    build: ./gitbucket
+    ports:
+      - 20000:8080
+      - 29418:29418
+    volumes:
+      - ./gitbucket/gitbucket-data:/gitbucket
